@@ -1,0 +1,30 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">Title</th>
+        <th scope="col">Book cost</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let book of books">
+        <th scope="row"><span>{{book.id}}</span></th>
+        <td><span>{{book.title}}</span></td>
+        <td><span>{{book.book_cost}}</span></td>
+        <td>
+          <span><i class="fas fa-edit"></i></span>
+          &nbsp;
+          <span><i class="fas fa-trash-alt"></i></span>
+        </td>
+    </tbody>
+  </table>
+
+  <div class="alert alert-danger" *ngIf="isError">
+    {{errorMessage}}
+  </div>
+  <!-- <td>
+    <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
+    <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+    <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+</td> -->
