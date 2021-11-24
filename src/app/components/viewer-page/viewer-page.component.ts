@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ApiResponse } from 'src/app/models/api-response.model';
 import { Book } from 'src/app/models/book.model';
 import { HttpService } from 'src/app/services/http.service';

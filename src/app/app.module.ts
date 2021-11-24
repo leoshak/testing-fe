@@ -12,26 +12,32 @@ import { ViewerPageComponent } from './components/viewer-page/viewer-page.compon
 import { NavComponent } from './components/nav/nav.component';
 import { FormsModule } from '@angular/forms';
 import { AuthorPageComponent } from './components/author-page/author-page.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/compiler/src/core';
+import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { ViewerPageModule } from './components/viewer-page/viewer-page.module';
 
 @NgModule({
+  schemas: [ ],
   declarations: [
     AppComponent,
     NavComponent,
     UserComponent,
     LoginComponent,
     RegisterComponent,
-    BookComponent,
-    ViewerPageComponent,
-    AuthorPageComponent
+    AuthorPageComponent,
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    RouterModule,
+    FormsModule,
+    ViewerPageModule,
   ],
   providers: [
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Book } from 'src/app/models/book.model';
 
 interface BookInterface {
   title?: string,
@@ -12,10 +13,10 @@ interface BookInterface {
 })
 export class BookComponent implements OnInit {
 
-  @Input() book: BookInterface;
+  @Input() book: Book;
 
   constructor() {
-    this.book = {} as BookInterface;
+    this.book = {} as Book;
   }
 
   ngOnInit(): void {

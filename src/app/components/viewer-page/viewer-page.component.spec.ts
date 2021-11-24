@@ -8,7 +8,7 @@ describe('ViewerPageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ViewerPageComponent ]
+      declarations: [ ViewerPageComponent ],
     })
     .compileComponents();
   });

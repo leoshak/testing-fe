@@ -25,7 +25,7 @@ export class AuthorPageComponent implements OnInit {
       headers: new HttpHeaders({ 
         'Content-Type': 'application/json', 
         "Accept": "application/json",
-        "Authorization": `Bearer ${this.tokenStorage.getToken()}`
+        "Authorization": "Bearer " + this.tokenStorage.getToken()
       })
     };
     
